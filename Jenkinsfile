@@ -8,7 +8,7 @@ pipeline{
 		}
 		stage("Docker container"){
 			steps{
-				sh "docker run -d -p 9000:9090 springapp:v1"
+				sh "docker run -d -p 9000:9090 springapp:v"
 			}
 		}
 		stage("Image push to Docker hub"){
