@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage("Docker Image"){
 			steps{
-				sh "docker build -t springapp:v1 ."
+				sh "docker build -t springapp:v ."
 			}
 		}
 		stage("Docker container"){
