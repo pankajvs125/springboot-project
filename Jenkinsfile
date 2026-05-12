@@ -3,12 +3,12 @@ pipeline{
 	stages{
 		stage("Docker Image"){
 			steps{
-				sh "docker build -t springapp:v ."
+				sh "docker build -t springapp ."
 			}
 		}
 		stage("Docker container"){
 			steps{
-				sh "docker run -d -p 9000:9090 springapp:v"
+				sh "docker run -d -p 9191:9090 springapp"
 			}
 		}
 		stage("Image push to Docker hub"){
