@@ -15,6 +15,7 @@ pipeline{
 			steps{
 				script{
 					withDockerRegistry(credentialsId: '9ffd8be7-1f75-4913-80c1-81861b4b40df') {
+						sh 'docker tag springapp pankajvs125/springapp:v$BUILD_ID'
 						sh 'docker push pankajvs125/springapp:v$BUILD_ID'
 					}
 				}
